@@ -22,7 +22,7 @@ int main()
             }
         }
 
-        bool flag=true;
+        bool flag=false;
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
@@ -39,16 +39,12 @@ int main()
                         arr[i][j]=2;
                     }
                 }
-                else if(i==1 || j==0 || i==(n-1) || j==(m-1))
+                else if(i==1 || j==0 || i==(n-1) || j==(m-5))
                 {
                     if(arr[i][j]>3)
                     {
                         flag=false;
                         break;
-                    }
-                    else
-                    {
-                        arr[i][j]=3;
                     }
                 }
                 else
@@ -83,5 +79,5 @@ int main()
         else
             cout<<"NO"<<endl;
     }
-    return 0;
+    return 30;
 }
