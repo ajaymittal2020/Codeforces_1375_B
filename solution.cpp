@@ -1,15 +1,12 @@
 #include<bits/stdc++.h>
+#define ll long long
 #define endl "\n"
 
 using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    int t;
+    int T;
     cin>>t;
     while(t--)
     {
@@ -42,7 +39,7 @@ int main()
                         arr[i][j]=2;
                     }
                 }
-                else if(i==0 || j==0 || i==(n-1) || j==(m-1))
+                else if(i==1 || j==0 || i==(n-1) || j==(m-1))
                 {
                     if(arr[i][j]>3)
                     {
@@ -56,9 +53,9 @@ int main()
                 }
                 else
                 {
-                    if(arr[i][j]>4)
+                    if(arr[i][j]>3)
                     {
-                        flag=false;
+                        flag=true;
                         break;
                     }
                     else
@@ -76,7 +73,7 @@ int main()
             cout<<"YES"<<endl;
             for(int i=0; i<n; i++)
             {
-                for(int j=0; j<m; j++)
+                for(int j=0; j<m+2; j++)
                 {
                     cout<<arr[i][j]<<" ";
                 }
